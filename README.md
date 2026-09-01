@@ -83,46 +83,6 @@ If port 5000 is already taken on your machine, copy `frontend/.env.example`
 to `frontend/.env` and change `VITE_API_PROXY_TARGET` to the backend address
 you used instead.
 
-**Troubleshooting `connect EACCES`/`ECONNREFUSED` proxy errors:** these mean
-nothing is answering on port 5000 the way the backend expects — usually a
-previous `python run.py` didn't fully exit (Flask's debug reloader on
-Windows doesn't always die cleanly from Ctrl+C or closing the terminal) and
-is still holding the port in a broken state. Check with:
-
-```bat
-netstat -ano | findstr :5000
-```
-
-If that lists any `python.exe` PIDs, close every terminal window that ran
-the backend, then confirm they're gone (`tasklist | findstr python`) before
-starting `python run.py` again just once.
-
-**First time loading the dashboard in Chrome or Edge, if you see "Unable to
-load your home" or the browser console shows `net::ERR_NETWORK_ACCESS_DENIED`:**
-this is a newer Chromium **Local Network Access** privacy permission
-(unrelated to this app's code, and present in both Chrome and Edge since
-they share the same engine) — it gates a page's ability to reach
-`127.0.0.1`/local-network addresses at all, even the page's own origin
-proxying to itself, and it isn't something a server can silently authorize.
-Every fresh browser profile needs to grant it once for `127.0.0.1:5173`:
-
-1. Click the tune/info icon left of the address bar while on
-   `http://127.0.0.1:5173` → **Site settings**.
-2. Find **Local network access** and set it to **Allow**.
-3. If the browser instead showed a permission prompt when the page first
-   loaded ("...wants to access devices on your local network"), click
-   **Allow** there instead.
-4. Reload the page.
-
-Expect the **first 2–3 page loads/reloads to still fail** even after this —
-the permission takes a couple of loads to fully settle in the browser, not
-just one. Keep reloading; once it settles it stays fixed for that browser
-profile and won't need to be granted again. If you're demoing this live, do
-a couple of warm-up reloads beforehand so it's already settled.
-
-Without this granted, requests fail *intermittently* (a random subset of the
-page's simultaneous API calls, not all of them) rather than cleanly — that
-inconsistency is itself a symptom of this permission, not a bug in the app.
 
 ### Demo logins
 
