@@ -105,11 +105,15 @@
     width: 2.25rem;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border-radius: 0.75rem;
-    background: var(--color-terracotta-800);
-    color: var(--color-stone-50);
     transform: rotate(-6deg);
     transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .onboarding-brand__mark img {
+    height: 100%;
+    width: 100%;
   }
 
   .onboarding-brand:hover .onboarding-brand__mark {
@@ -727,7 +731,6 @@
       background: color-mix(in srgb, var(--color-stone-950) 94%, transparent);
     }
 
-    .onboarding-brand__mark,
     .onboarding-actions button {
       background: var(--color-terracotta-500);
       color: var(--color-stone-950);

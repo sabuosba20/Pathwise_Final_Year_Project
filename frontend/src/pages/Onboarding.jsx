@@ -198,7 +198,7 @@ export default function Onboarding() {
           to="/"
         >
           <span className="onboarding-brand__mark">
-            <Compass aria-hidden="true" size={18} weight="bold" />
+            <img src="/pathwise-logo.svg" alt="" aria-hidden="true" />
           </span>
           <span>Pathwise</span>
         </Link>
