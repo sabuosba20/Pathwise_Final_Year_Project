@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("pathwise-theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.classList.toggle("dark", theme === "dark");
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {
+          document.documentElement.setAttribute("data-theme", "light");
+          document.documentElement.style.colorScheme = "light";
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#773722" />
+    <link rel="icon" type="image/svg+xml" href="/pathwise-logo.svg" />
+    <meta
+      name="description"
+      content="Pathwise recommends university and skill-relevant courses based on your field, skills, and what similar students found useful."
+    />
+    <title>Pathwise | Personalised Course Recommendations</title>
+
+    <link rel="canonical" href="https://pathwise.example/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pathwise" />
+    <meta property="og:url" content="https://pathwise.example/" />
+    <meta
+      property="og:title"
+      content="Pathwise | Personalised Course Recommendations"
+    />
+    <meta
+      property="og:description"
+      content="Pathwise recommends university and skill-relevant courses based on your field, skills, and what similar students found useful."
+    />
+    <meta
+      property="og:image"
+      content="https://pathwise.example/social-preview.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Pathwise: Find the course that fits."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Pathwise | Personalised Course Recommendations"
+    />
+    <meta
+      name="twitter:description"
+      content="Pathwise recommends university and skill-relevant courses based on your field, skills, and what similar students found useful."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pathwise.example/social-preview.png"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

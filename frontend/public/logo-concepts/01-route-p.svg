@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">Pathwise Route P logo concept</title>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 80V20h27c16 0 27 9 27 23S71 66 55 66H43" stroke-width="11"/>
+    <circle cx="28" cy="80" r="5.5" fill="currentColor" stroke="none"/>
+  </g>
+</svg>

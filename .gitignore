@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.tmp/
+.codex_tmp/
+.claude/
+node_modules/
+frontend/dist/
+
+# Report documents (excluded from repo per request)
+/FYP part 2.docx
+/FYP part 2 (v2).docx
+/Pathwise_UAT_Session_Pack_Completed_Simulated.docx
+/Pathwise_UAT_Session_Pack_Retest.docx

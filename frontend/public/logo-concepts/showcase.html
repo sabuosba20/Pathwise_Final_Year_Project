@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathwise — Logo Design Exploration</title>
+    <style>
+      :root { color-scheme: light; --ink:#1c1917; --muted:#78716c; --paper:#fafaf9; --card:#fff; --brand:#773722; --line:#e7e5e4; }
+      * { box-sizing:border-box; }
+      body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.6 Inter, ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+      main { width:min(1180px, calc(100% - 40px)); margin:auto; padding:72px 0 96px; }
+      header { max-width:680px; margin:0 auto 56px; text-align:center; }
+      .eyebrow { margin:0 0 12px; color:var(--brand); font-size:11px; font-weight:750; letter-spacing:.2em; text-transform:uppercase; }
+      h1 { margin:0; font-size:clamp(42px, 7vw, 76px); font-weight:300; letter-spacing:-.055em; }
+      header p:last-child { margin:18px auto 0; color:var(--muted); }
+      .grid { display:grid; grid-template-columns:repeat(6, 1fr); gap:18px; }
+      article { grid-column:span 2; overflow:hidden; border:1px solid var(--line); border-radius:24px; background:var(--card); transition:transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s; }
+      article:nth-child(4) { grid-column:2 / span 2; }
+      article:hover { transform:translateY(-5px); box-shadow:0 24px 70px rgb(28 25 23 / .1); }
+      .canvas { display:grid; min-height:260px; place-items:center; color:var(--brand); background:linear-gradient(145deg,#fff,#f5f5f4); }
+      .canvas svg { width:130px; height:130px; transition:transform .45s cubic-bezier(.16,1,.3,1); }
+      article:hover .canvas svg { transform:scale(1.06); }
+      .inverse .canvas { color:#fafaf9; background:var(--ink); }
+      .copy { min-height:214px; padding:25px 26px 28px; border-top:1px solid var(--line); }
+      .number { color:var(--brand); font:700 11px/1 ui-monospace, monospace; letter-spacing:.15em; }
+      h2 { margin:12px 0 7px; font-size:20px; letter-spacing:-.025em; }
+      .type { margin:0 0 14px; color:var(--muted); font:600 10px/1.4 ui-monospace, monospace; letter-spacing:.12em; text-transform:uppercase; }
+      .copy p:last-child { margin:0; color:#57534e; }
+      footer { margin-top:42px; text-align:center; color:var(--muted); font-size:12px; }
+      @media (max-width:850px) { .grid { grid-template-columns:repeat(2,1fr); } article, article:nth-child(4) { grid-column:span 1; } }
+      @media (max-width:560px) { main { width:min(100% - 24px,1180px); padding-top:44px; } .grid { grid-template-columns:1fr; } .canvas { min-height:220px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Identity study 02</p>
+        <h1>Pathwise</h1>
+        <p>Five scalable marks for personalised learning direction. Every concept is a real, editable SVG and uses the existing Pathwise terracotta.</p>
+      </header>
+      <section class="grid" aria-label="Five Pathwise logo concepts">
+        <article>
+          <div class="canvas"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M28 80V20h27c16 0 27 9 27 23S71 66 55 66H43" stroke-width="11"/><circle cx="28" cy="80" r="5.5" fill="currentColor" stroke="none"/></g></svg></div>
+          <div class="copy"><span class="number">01</span><h2>Route P</h2><p class="type">Letter abstraction · bold</p><p>A continuous P becomes a route, with its lower endpoint marking the student’s starting position.</p></div>
+        </article>
+        <article class="inverse">
+          <div class="canvas"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><mask id="m"><rect width="100" height="100" fill="white"/><path d="M23 78c0-22 29-14 29-35 0-13 9-20 25-21" fill="none" stroke="black" stroke-linecap="round" stroke-width="11"/></mask></defs><circle cx="50" cy="50" r="36" fill="currentColor" mask="url(#m)"/><circle cx="77" cy="22" r="6" fill="currentColor"/></svg></div>
+          <div class="copy"><span class="number">02</span><h2>Path Aperture</h2><p class="type">Negative space · iconic</p><p>A route is carved from a stable circle. The detached destination point creates tension and forward pull.</p></div>
+        </article>
+        <article>
+          <div class="canvas"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"><path d="M22 31h25c13 0 21 7 21 18s-8 18-21 18H29"/><path d="M40 20 78 50 40 80"/></g></svg></div>
+          <div class="copy"><span class="number">03</span><h2>Forward Fold</h2><p class="type">Geometry · energetic</p><p>A compact P-like loop overlaps a forward chevron: personalised profile meeting decisive movement.</p></div>
+        </article>
+        <article>
+          <div class="canvas"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="currentColor"><rect x="18" y="65" width="22" height="10" rx="5" transform="rotate(-39 29 70)"/><rect x="34" y="48" width="25" height="11" rx="5.5" transform="rotate(-27 46.5 53.5)"/><rect x="55" y="36" width="23" height="10" rx="5" transform="rotate(-10 66.5 41)"/><circle cx="80" cy="34" r="7"/></g></svg></div>
+          <div class="copy"><span class="number">04</span><h2>Learning Arc</h2><p class="type">Capsule matrix · friendly</p><p>Course modules gather into a rising arc, ending in one confident goal. Modular, warm and easy to animate.</p></div>
+        </article>
+        <article class="inverse">
+          <div class="canvas"><svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M23 76c0-20 23-17 23-34V24" stroke-width="9"/><path d="M46 42c0 14 12 17 26 17" stroke-width="4" opacity=".38"/><circle cx="23" cy="76" r="6" fill="currentColor" stroke="none"/><circle cx="46" cy="24" r="8" fill="currentColor" stroke="none"/><circle cx="76" cy="59" r="5" fill="currentColor" stroke="none" opacity=".38"/></g></svg></div>
+          <div class="copy"><span class="number">05</span><h2>Guided Branch</h2><p class="type">Node network · personalised</p><p>Several possible directions exist, but one path is intentionally stronger—the recommendation chosen for you.</p></div>
+        </article>
+      </section>
+      <footer>Hover to inspect · SVG viewBox 0 0 100 100 · currentColor enabled</footer>
+    </main>
+  </body>
+</html>

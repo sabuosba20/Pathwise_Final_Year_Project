@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">Pathwise Guided Branch logo concept</title>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M23 76c0-20 23-17 23-34V24" stroke-width="9"/>
+    <path d="M46 42c0 14 12 17 26 17" stroke-width="4" opacity=".38"/>
+    <circle cx="23" cy="76" r="6" fill="currentColor" stroke="none"/>
+    <circle cx="46" cy="24" r="8" fill="currentColor" stroke="none"/>
+    <circle cx="76" cy="59" r="5" fill="currentColor" stroke="none" opacity=".38"/>
+  </g>
+</svg>

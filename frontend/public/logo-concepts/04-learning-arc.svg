@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">Pathwise Learning Arc logo concept</title>
+  <g fill="currentColor">
+    <rect x="18" y="65" width="22" height="10" rx="5" transform="rotate(-39 29 70)"/>
+    <rect x="34" y="48" width="25" height="11" rx="5.5" transform="rotate(-27 46.5 53.5)"/>
+    <rect x="55" y="36" width="23" height="10" rx="5" transform="rotate(-10 66.5 41)"/>
+    <circle cx="80" cy="34" r="7"/>
+  </g>
+</svg>

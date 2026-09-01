@@ -1,0 +1,79 @@
+{
+  "source_directory": "C:\\Users\\Sohaib Abuosba\\FYP\\datasets",
+  "source_rows": {
+    "final_merged_courses": 8860,
+    "Online_Courses": 8092,
+    "udemy_courses": 3678
+  },
+  "output_rows": 7974,
+  "dropped_rows": {
+    "duplicate_url": 0,
+    "generic_homepage": 3,
+    "missing_url": 883
+  },
+  "metadata_recovery": {
+    "Coursera_raw_matches": 2122,
+    "FutureLearn_raw_matches": 1914,
+    "Simplilearn_raw_matches": 141,
+    "Udacity_raw_matches": 271,
+    "Udemy_raw_matches": 3526,
+    "descriptions_restored": 4448,
+    "display_titles_restored": 7972,
+    "raw_url_matches": 7974,
+    "skills_recovered": 1539
+  },
+  "coverage": {
+    "description": 0.5578,
+    "rating": 0.2565,
+    "skills": 0.193,
+    "specific_field_tags": 0.8846
+  },
+  "max_lengths": {
+    "title": 243,
+    "url": 171,
+    "provider": 11,
+    "category": 30,
+    "skills": 1170,
+    "field_tags": 66
+  },
+  "providers": {
+    "Coursera": 2122,
+    "FutureLearn": 1914,
+    "Simplilearn": 141,
+    "Udacity": 271,
+    "Udemy": 3526
+  },
+  "categories": {
+    "Arts & Humanities": 72,
+    "Business": 693,
+    "Business & Finance": 1131,
+    "Computer Science": 355,
+    "Data Science": 313,
+    "General": 2326,
+    "Graphic Design": 572,
+    "Health": 191,
+    "Information Technology": 174,
+    "Language Learning": 66,
+    "Math & Logic": 17,
+    "Music": 634,
+    "Personal Development": 57,
+    "Physical Science & Engineering": 129,
+    "Social Sciences": 55,
+    "Web Development": 1189
+  },
+  "difficulties": {
+    "Advanced": 83,
+    "All Levels": 1877,
+    "Beginner": 1238,
+    "Intermediate": 505,
+    "Unknown": 4271
+  },
+  "resource_types": {
+    "Course": 7442,
+    "Executive Program": 4,
+    "Nanodegree Program": 72,
+    "Professional Certificate": 70,
+    "Project": 17,
+    "Specialization": 369
+  }
+}
