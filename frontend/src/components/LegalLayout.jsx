@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 
+import Footer from "./Footer";
 import ThemeToggle from "./ThemeToggle";
 
 export default function LegalLayout({ title, updated, children }) {
@@ -23,6 +24,8 @@ export default function LegalLayout({ title, updated, children }) {
         <p className="mt-2 text-sm text-stone-500 dark:text-stone-500">Last updated {updated}</p>
         <div className="mt-8 space-y-6 leading-7 text-stone-700 dark:text-stone-300">{children}</div>
       </article>
+
+      <Footer maxWidth="max-w-3xl" />
     </main>
   );
 }

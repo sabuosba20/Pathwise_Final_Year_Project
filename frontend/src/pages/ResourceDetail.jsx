@@ -14,6 +14,7 @@ import { Link, useNavigate, useParams } from "react-router";
 import client from "../api/client";
 import SafeExternalLink from "../components/SafeExternalLink";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import { LoadingRegion, Skeleton } from "../components/ui/Skeleton";
 import useAuth from "../context/useAuth";
 
@@ -518,6 +519,8 @@ export default function ResourceDetail() {
           </main>
         </>
       )}
+
+      <Footer />
     </div>
   );
 }

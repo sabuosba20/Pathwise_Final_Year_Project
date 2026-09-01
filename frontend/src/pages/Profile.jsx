@@ -17,6 +17,7 @@ import { Link, useNavigate, useSearchParams } from "react-router";
 import client from "../api/client";
 import Avatar from "../components/Avatar";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import SavedCoursesTab from "../components/dashboard/SavedCoursesTab";
 import { LoadingRegion, Skeleton } from "../components/ui/Skeleton";
 import useAuth from "../context/useAuth";
@@ -422,6 +423,8 @@ export default function Profile() {
           )}
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

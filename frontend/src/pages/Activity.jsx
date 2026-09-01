@@ -15,6 +15,7 @@ import client from "../api/client";
 import SafeExternalLink from "../components/SafeExternalLink";
 import CataloguePagination from "../components/dashboard/CataloguePagination";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import { LoadingRegion, Skeleton } from "../components/ui/Skeleton";
 import useAuth from "../context/useAuth";
 
@@ -392,6 +393,8 @@ export default function Activity() {
           )}
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

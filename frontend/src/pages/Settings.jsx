@@ -22,6 +22,7 @@ import { Link, useNavigate } from "react-router";
 
 import client from "../api/client";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import { LoadingRegion, Skeleton } from "../components/ui/Skeleton";
 import useAuth from "../context/useAuth";
 import { FIELD_OPTIONS, getSkillSuggestions, mergeSkills, normaliseSkill, parseSkills } from "../utils/learningProfile";
@@ -802,6 +803,8 @@ export default function Settings() {
           </div>
         </div>
       </main>
+
+      <Footer />
 
       {deleteState.open && (
         <div

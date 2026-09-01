@@ -18,6 +18,7 @@ import { Link, useNavigate } from "react-router";
 
 import client from "../api/client";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import { LoadingRegion, Skeleton } from "../components/ui/Skeleton";
 import useAuth from "../context/useAuth";
 
@@ -873,6 +874,8 @@ export default function Goals() {
         </div>,
         document.body,
       )}
+
+      <Footer />
     </div>
   );
 }

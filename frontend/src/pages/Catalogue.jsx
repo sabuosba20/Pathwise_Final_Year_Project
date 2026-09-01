@@ -18,6 +18,7 @@ import CataloguePagination from "../components/dashboard/CataloguePagination";
 import CourseComparison from "../components/dashboard/CourseComparison";
 import CourseCard, { CourseCardSkeleton } from "../components/dashboard/CourseCard";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import RecommendationCard, {
   RecommendationCardSkeleton,
 } from "../components/dashboard/RecommendationCard";
@@ -912,6 +913,8 @@ export default function Catalogue() {
           </button>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }

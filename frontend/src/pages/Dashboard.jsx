@@ -16,6 +16,7 @@ import { Link, useNavigate } from "react-router";
 
 import client from "../api/client";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import Footer from "../components/Footer";
 import RecommendationCard, {
   RecommendationCardSkeleton,
 } from "../components/dashboard/RecommendationCard";
@@ -698,6 +699,8 @@ export default function Dashboard() {
           )}
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
