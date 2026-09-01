@@ -952,11 +952,15 @@
     width: 2.25rem;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border-radius: 0.75rem;
-    background: var(--color-terracotta-700);
-    color: var(--color-stone-50);
     transform: rotate(-7deg);
     transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .auth-brand__mark img {
+    height: 100%;
+    width: 100%;
   }
 
   .auth-brand:hover .auth-brand__mark {
@@ -1487,11 +1491,15 @@
     width: 2.1rem;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border-radius: 0.75rem;
-    background: var(--color-terracotta-800);
-    color: var(--color-stone-50);
     transform: rotate(-7deg);
     transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .brand-mark img {
+    height: 100%;
+    width: 100%;
   }
 
   .brand-link:hover .brand-mark {
@@ -3022,10 +3030,6 @@
     color: var(--color-stone-100);
   }
 
-  .brand-mark {
-    background: var(--color-terracotta-500);
-    color: var(--color-stone-950);
-  }
 
   .primary-cta {
     background: var(--color-terracotta-400);

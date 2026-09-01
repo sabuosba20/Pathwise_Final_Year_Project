@@ -28,7 +28,7 @@ export default function Landing() {
       <header className="landing-nav sticky top-0 z-20 border-b border-stone-200/80 dark:border-stone-800/90">
         <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
           <Link className="brand-link focus-visible:outline-2 focus-visible:outline-terracotta-700 dark:focus-visible:outline-terracotta-400" to="/">
-            <span className="brand-mark"><Compass size={20} weight="bold" aria-hidden="true" /></span>
+            <span className="brand-mark"><img src="/pathwise-logo.svg" alt="" aria-hidden="true" /></span>
             <span>Pathwise</span>
           </Link>
 
@@ -131,7 +131,7 @@ export default function Landing() {
       <footer className="journey-section border-t border-stone-200 dark:border-stone-800">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-7 text-sm text-stone-600 dark:text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 font-display font-bold text-stone-900 dark:text-stone-100">
-            <Compass size={18} weight="bold" aria-hidden="true" /> Pathwise
+            <img src="/pathwise-logo.svg" alt="" aria-hidden="true" className="size-6 rounded-md" /> Pathwise
           </div>
           <p>Personalised course recommendations for university learners.</p>
           <nav aria-label="Legal" className="flex items-center gap-5">

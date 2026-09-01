@@ -1,4 +1,4 @@
-import { ArrowLeft, Compass } from "@phosphor-icons/react";
+import { ArrowLeft } from "@phosphor-icons/react";
 import { motion as Motion, useReducedMotion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
@@ -91,7 +91,7 @@ export default function AuthLayout({
                 to="/"
               >
                 <span className="auth-brand__mark">
-                  <Compass aria-hidden="true" size={19} weight="bold" />
+                  <img src="/pathwise-logo.svg" alt="" aria-hidden="true" />
                 </span>
                 <span>Pathwise</span>
               </Link>

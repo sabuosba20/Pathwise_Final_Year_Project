@@ -3,7 +3,6 @@ import {
   CaretDown,
   ClockCounterClockwise,
   GearSix,
-  GraduationCap,
   House,
   SignOut,
   Target,
@@ -59,8 +58,8 @@ export default function DashboardHeader({ userName, onLogout }) {
             className="inline-flex items-center gap-3 font-display text-lg font-bold tracking-tight text-stone-950 focus-visible:outline-2 focus-visible:outline-terracotta-700 dark:text-stone-100 dark:focus-visible:outline-terracotta-400"
             to="/dashboard"
           >
-            <span className="inline-flex size-9 -rotate-6 items-center justify-center rounded-xl bg-terracotta-800 text-stone-50 dark:bg-terracotta-400 dark:text-stone-950">
-              <GraduationCap aria-hidden="true" size={20} weight="bold" />
+            <span className="inline-flex size-9 -rotate-6 items-center justify-center overflow-hidden rounded-xl">
+              <img src="/pathwise-logo.svg" alt="" aria-hidden="true" className="size-full" />
             </span>
             <span className="hidden sm:inline">Pathwise</span>
           </Link>

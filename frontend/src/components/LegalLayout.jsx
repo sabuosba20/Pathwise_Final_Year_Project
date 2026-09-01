@@ -7,7 +7,11 @@ export default function LegalLayout({ title, updated, children }) {
     <main className="min-h-[100dvh] bg-stone-50 text-stone-950 dark:bg-stone-950 dark:text-stone-100">
       <header className="border-b border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-900">
         <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-          <Link className="inline-flex text-lg font-bold tracking-tight text-terracotta-800 dark:text-terracotta-400" to="/">
+          <Link
+            className="inline-flex items-center gap-2 text-lg font-bold tracking-tight text-terracotta-800 dark:text-terracotta-400"
+            to="/"
+          >
+            <img src="/pathwise-logo.svg" alt="" aria-hidden="true" className="size-7 rounded-md" />
             Pathwise
           </Link>
           <ThemeToggle />
