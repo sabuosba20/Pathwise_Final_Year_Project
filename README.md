@@ -21,14 +21,15 @@ cd Pathwise_Final_Year_Project
 
 Prerequisites: [Python 3.11 or 3.12](https://www.python.org/downloads/) and [Node.js 18+](https://nodejs.org/) must both be installed and on your `PATH` (check with `python --version` and `node --version`) before continuing.
 
-**If `pip install` later fails with `ImportError: DLL load failed... The
-filename or extension is too long`**, the extracted project is buried too
-deep in your folder structure — commonly because a ZIP got extracted inside
-a folder already sharing its name (Windows Explorer's "Extract All" creates
-a folder named after the ZIP, so extracting a ZIP whose own root folder has
-the same name doubles it up), pushing paths past Windows' 260-character
-limit. Move the project to a short path like `C:\Pathwise\` and re-run the
-steps below from there.
+**Windows only — if `pip install` later fails with `ImportError: DLL load
+failed... The filename or extension is too long`**, the extracted project is
+buried too deep in your folder structure — commonly because a ZIP got
+extracted inside a folder already sharing its name (Windows Explorer's
+"Extract All" creates a folder named after the ZIP, so extracting a ZIP
+whose own root folder has the same name doubles it up), pushing paths past
+Windows' 260-character limit. Move the project to a short path like
+`C:\Pathwise\` and re-run the steps below from there. macOS and Linux don't
+have this path-length limit.
 
 ### 1. Backend
 
@@ -37,7 +38,7 @@ steps below from there.
 ```bat
 cd backend
 python -m venv .venv
-.venv\Scripts\activate.bat
+.venv\Scripts\activate
 pip install -r requirements.txt
 python run.py
 ```
@@ -57,6 +58,22 @@ silently instead of raising an error you'd notice, which leaves the venv
 unactivated (so `pip install`/`python run.py` quietly fall back to your
 global Python). Check your prompt title or run `echo %COMSPEC%` vs
 `$PSVersionTable` if you're not sure which shell you're in.
+
+**macOS / Linux (bash or zsh):**
+
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python run.py
+```
+
+Use `python3` to create the venv (plain `python` may not exist or may point
+to Python 2 on macOS), but once the venv is activated its own `python`
+correctly points at the venv's Python 3 interpreter — no need for `python3`
+after that. If `python3` isn't found at all, install it from
+[python.org](https://www.python.org/downloads/) or via `brew install python`.
 
 A `.env` file isn't required — the app falls back to sane development
 defaults (SQLite database, a generated secret key) without one. Copy
@@ -82,7 +99,6 @@ Visit `http://127.0.0.1:5173`. Vite proxies `/api` requests to
 If port 5000 is already taken on your machine, copy `frontend/.env.example`
 to `frontend/.env` and change `VITE_API_PROXY_TARGET` to the backend address
 you used instead.
-
 
 ### Demo logins
 
@@ -175,9 +191,18 @@ and recommendation-signal consistency.
 The validated catalogue is stored at `backend/data/resources_import_ready.csv`.
 To rebuild it from the source CSV files:
 
+**Windows (PowerShell):**
+
 ```powershell
 backend\.venv\Scripts\python.exe backend\scripts\build_resources_dataset.py `
   --source-dir "C:\path\to\datasets"
+```
+
+**macOS / Linux:**
+
+```bash
+backend/.venv/bin/python backend/scripts/build_resources_dataset.py \
+  --source-dir "/path/to/datasets"
 ```
 
 The builder restores readable source titles and descriptions, removes missing
